@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator - สร้าง QR Code จาก URL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1 class="title">QR Code Generator</h1>
+            <p class="subtitle">สร้าง QR Code จาก URL ของคุณ</p>
+
+            <div class="input-section">
+                <input 
+                    type="text" 
+                    id="urlInput" 
+                    placeholder="ใส่ URL ที่นี่ (เช่น https://example.com)" 
+                    class="url-input"
+                >
+                <button id="generateBtn" class="generate-btn">สร้าง QR Code</button>
+            </div>
+
+            <div id="qrContainer" class="qr-container">
+                <div id="qrCode" class="qr-code"></div>
+            </div>
+
+            <div id="actionButtons" class="action-buttons" style="display: none;">
+                <button id="downloadBtn" class="download-btn">
+                    📥 ดาวน์โหลด PNG
+                </button>
+                <button id="copyBtn" class="copy-btn">
+                    📋 คัดลอก
+                </button>
+                <button id="printBtn" class="print-btn">
+                    🖨️ พิมพ์
+                </button>
+            </div>
+
+            <div id="errorMessage" class="error-message"></div>
+            <div id="successMessage" class="success-message"></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
